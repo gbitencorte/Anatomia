@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia Web - HTML - Parte 2</title>
+
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <header class="main-header">
+        <div>
+            <h1>Anatomia de uma página HTML5</h1>
+            <h2>Parte 2: Formulários e Texto</h2>
+        </div>
+        <nav>
+            <a href="./index.html">← Voltar para parte 1</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="container">
+            <div class="header-content">
+                <div class="card">
+                    <h2>Aprofundando o Conhecimento</h2>
+                    <p>
+                        Nesta segunda parte, exploramos tags essenciais para a interatividade 
+                        (formulários) e para dar um significado ainda mais rico ao conteúdo textual.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <section class="formularios">
+            <h3 class="section-title">Formulários Interativos: Coletando Dados</h3>
+
+            <form class="form-container">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <div class="form-group">
+                        <label for="nome" class="form-label">Nome Completo: </label>
+                        <input type="text" name="nome" id="nome" class="form-input" placeholder="Ex: Ana Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento" class="form-label">Data de Nascimento: </label>
+                        <input type="date" name="nascimento" id="nascimento" class="form-input" required>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="curso" class="form-label">Curso de Interesse (com autocompletar): </label>
+                        <input list="cursos" id="curso" name="curso" class="form-input" required>
+                        <datalist id="cursos">
+                            <option value="Desenvolvimento Web"></option>
+                            <option value="Design UX/UI"></option>
+                            <option value="Ciência de Dados"></option>
+                            <option value="Marketing Digital"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferências</legend>
+
+                    <div class="form-group">
+                    <label for="">Área de Foco (com lista dropdown): </label>
+                    <input type="" placeholder="Selecione uma opção">
+                    <select id="areas">
+                        <option value="">Front-End</option>
+                        <option value="">Back-End</option>
+                        <option value="">Full Stack</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="form-paragraph">Nível de Experiência: </p>
+                        <input type="radio" >
+                        <label for="">Iniciante</label>
+                        <div class="form-group"></div>
+                        <input type="radio" >
+                        <label for="">Intermediário</label>
+                        <input type="radio" >
+                        <label for="">Avançado</label>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <p class="form-paragraph">Tecnologias de Interesse: </p>
+                        <input type="checkbox">
+                        <label for="">HTML & CSS</label>
+
+                        <input type="checkbox">
+                        <label for="">JavaScript</label>
+
+                        <input type="checkbox">
+                        <label for="">React</label>
+                    </div>
+                </fieldset>
+
+                
+            </form>
+
+            <aside class="instrucoes">
+                <p>
+                    O formulário agora combina múltiplos elementos: <code>&lt;datalist</datalist>&gt;</code> para 
+                    autocompletar, e <code>&lt;section&gt;</code> para uma lista fechada de opções.
+                </p>
+
+                <p>
+                    Para escolhas, usamos <code>&lt;input type="radio"&gt;</code> (escolha única) e 
+                    <code>&lt;input type="checkbox"&gt;</code> (múltipla escolha).
+                </p>
+
+                <p>
+                    A tag <code>&lt;output&gt;</code> exibe dinamicamente o valor do <code>&lt;input type="range"&gt;</code>, 
+                    criando uma experiência interativa.
+                </p>
+
+                <p>
+                    Note também os atributos placeholder, que exibe um texto de ajuda no campo, e required, que torna seu 
+                    preenchimento obrigatório.
+                </p>
+            </aside>
+        </section>
+
+    </main>
+</body>
+</html>
