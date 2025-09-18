@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatomia Web - HTML - Parte 2</title>
 
     <link rel="stylesheet" href="./style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="main-header">
-        <div>
+        <div class="div-container">
             <h1>Anatomia de uma página HTML5</h1>
-            <h2>Parte 2: Formulários e Texto</h2>
+            <h2 class="part2">Parte 2: Formulários e Texto</h2>
         </div>
         <nav>
             <a href="./index.html">← Voltar para parte 1</a>
@@ -19,113 +25,191 @@
     </header>
 
     <main class="container">
-        <div class="container">
-            <div class="header-content">
-                <div class="card">
-                    <h2>Aprofundando o Conhecimento</h2>
-                    <p>
-                        Nesta segunda parte, exploramos tags essenciais para a interatividade 
-                        (formulários) e para dar um significado ainda mais rico ao conteúdo textual.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
+        <div class="header-content">
+            <div class="card">
+                <h2>Aprofundando o Conhecimento</h2>
+                <p>
+                    Nesta segunda parte, exploramos tags essenciais para a interatividade
+                    (formulários) e para dar um significado ainda mais rico ao conteúdo textual.
+                </p>
+            </div>     
+    </div>
+
 
         <section class="formularios">
             <h3 class="section-title">Formulários Interativos: Coletando Dados</h3>
+            <div class="grid-container">
 
-            <form class="form-container">
-                <fieldset>
-                    <legend>Informações Pessoais</legend>
+                <form class="form-container">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
 
-                    <div class="form-group">
-                        <label for="nome" class="form-label">Nome Completo: </label>
-                        <input type="text" name="nome" id="nome" class="form-input" placeholder="Ex: Ana Silva" required>
-                    </div>
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome Completo: </label>
+                            <input type="text" name="nome" id="nome" class="form-input" placeholder="Ex: Ana Silva"
+                                required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="nascimento" class="form-label">Data de Nascimento: </label>
-                        <input type="date" name="nascimento" id="nascimento" class="form-input" required>
-                    </div>
-                    
+                        <div class="form-group">
+                            <label for="nascimento" class="form-label">Data de Nascimento: </label>
+                            <input type="date" name="nascimento" id="nascimento" class="form-input" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="curso" class="form-label">Curso de Interesse (com autocompletar): </label>
-                        <input list="cursos" id="curso" name="curso" class="form-input" required>
-                        <datalist id="cursos">
-                            <option value="Desenvolvimento Web"></option>
-                            <option value="Design UX/UI"></option>
-                            <option value="Ciência de Dados"></option>
-                            <option value="Marketing Digital"></option>
-                        </datalist>
-                    </div>
-                </fieldset>
 
-                <fieldset>
-                    <legend>Preferências</legend>
+                        <div class="form-group">
+                            <label for="curso" class="form-label">Curso de Interesse (com autocompletar): </label>
+                            <input list="cursos" id="curso" name="curso" class="form-input" required>
+                            <datalist id="cursos">
+                                <option value="Desenvolvimento Web"></option>
+                                <option value="Design UX/UI"></option>
+                                <option value="Ciência de Dados"></option>
+                                <option value="Marketing Digital"></option>
+                            </datalist>
+                        </div>
+                    </fieldset>
 
-                    <div class="form-group">
-                    <label for="">Área de Foco (com lista dropdown): </label>
-                    <select id="areas" >
-                        <option value="">Selecione uma opção</option>
-                        <option value="">Front-End</option>
-                        <option value="">Back-End</option>
-                        <option value="">Full Stack</option>
-                    </select>
-                    </div>
+                    <fieldset>
+                        <legend>Preferências</legend>
 
-                    <div class="form-group">
-                        <p class="form-paragraph">Nível de Experiência: </p>
-                        <input type="radio" >
-                        <label for="">Iniciante</label>
-                        <div class="form-group"></div>
-                        <input type="radio" >
-                        <label for="">Intermediário</label>
-                        <input type="radio" >
-                        <label for="">Avançado</label>
-                    </div>
-                    
+                        <div class="form-group">
+                            <label for="">Área de Foco (com lista dropdown): </label>
+                            <select id="areas" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="">Front-End</option>
+                                <option value="">Back-End</option>
+                                <option value="">Full Stack</option>
+                            </select>
+                        </div>
 
-                    <div class="form-group">
-                        <p class="form-paragraph">Tecnologias de Interesse: </p>
-                        <input type="checkbox">
-                        <label for="">HTML & CSS</label>
+                        <div class="form-group">
+                            <p class="form-paragraph">Nível de Experiência: </p>
+                            
+                            <div class="radio-group">
+                                <input type="radio" required>
+                                <label for="">Iniciante</label>
+                                <input type="radio">
+                                <label for="">Intermediário</label>
+                                <input type="radio">
+                                <label for="">Avançado</label>
+                            </div>
+                            
+                        </div>
 
-                        <input type="checkbox">
-                        <label for="">JavaScript</label>
 
-                        <input type="checkbox">
-                        <label for="">React</label>
-                    </div>
-                </fieldset>
+                        <div>
+                            <p class="form-paragraph">Tecnologias de Interesse: </p>
+                            <div class="checkbox-group">
+                                <input type="checkbox">
+                                <label for="">HTML & CSS</label>
 
-                
-            </form>
+                                <input type="checkbox">
+                                <label for="">JavaScript</label>
 
-            <aside class="instrucoes">
-                <p>
-                    O formulário agora combina múltiplos elementos: <code>&lt;datalist</datalist>&gt;</code> para 
-                    autocompletar, e <code>&lt;section&gt;</code> para uma lista fechada de opções.
-                </p>
+                                <input type="checkbox">
+                                <label for="">React</label>
+                            </div>
+                            
+                        </div>
+                    </fieldset>
 
-                <p>
-                    Para escolhas, usamos <code>&lt;input type="radio"&gt;</code> (escolha única) e 
-                    <code>&lt;input type="checkbox"&gt;</code> (múltipla escolha).
-                </p>
+                    <fieldset class="feedback">
+                        <legend>Feedback</legend>
+                        <div class="form-group">
+                            <label for="satisfacao" class="form-label">Nível de Satisfação (0 a 100): </label>
+                            <input type="range" id="satisfacao" name="satisfacao" min="0" max="100" value="75"
+                                class="form-input" oninput="resultado.value=parseInt(satisfacao.value)">
+                            <div class="range-output">
+                                <output name="resultado" for="satisfacao">75</output>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="mensagem" class="form-label">Deixe seu comentário: </label>
+                            <textarea name="mensagem" id="mensagem" rows="4" class="form-textarea"></textarea>
+                            <button>Enviar inscrição</button>
+                        </div>
+                    </fieldset>
 
-                <p>
-                    A tag <code>&lt;output&gt;</code> exibe dinamicamente o valor do <code>&lt;input type="range"&gt;</code>, 
-                    criando uma experiência interativa.
-                </p>
+                </form>
 
-                <p>
-                    Note também os atributos placeholder, que exibe um texto de ajuda no campo, e required, que torna seu 
-                    preenchimento obrigatório.
-                </p>
-            </aside>
+                <aside class="tag-highlight">
+                    <p>
+                        O formulário agora combina múltiplos elementos: <code>&lt;datalist</datalist>&gt;</code> para
+                        autocompletar, e <code>&lt;section&gt;</code> para uma lista fechada de opções.
+                    </p>
+
+                    <p>
+                        Para escolhas, usamos <code>&lt;input type="radio"&gt;</code> (escolha única) e
+                        <code>&lt;input type="checkbox"&gt;</code> (múltipla escolha).
+                    </p>
+
+                    <p>
+                        A tag <code>&lt;output&gt;</code> exibe dinamicamente o valor do
+                        <code>&lt;input type="range"&gt;</code>,
+                        criando uma experiência interativa.
+                    </p>
+
+                    <p>
+                        Note também os atributos placeholder, que exibe um texto de ajuda no campo, e required, que
+                        torna seu
+                        preenchimento obrigatório.
+                    </p>
+                </aside>
+            </div>
         </section>
 
+        <section id="texto-avancado">
+            <h3 class="section-title">Semântica de Texto Específica</h3>
+            <div class="card tag-highlight">
+                <div class="text-content">
+                    <p>
+                        Nesta seção, exploramos como dar mais significado a palavras específicas. Por exemplo, 
+                        <dfn>HTML5</dfn> é a quinta versão da 
+                        <abbr title="HyperText Markup Language">HTML</abbr>.
+                        Ela foi oficialmente lançada em <time datetime="2014-10-28">28 de outubro de 2014</time>.
+                        Uma de suas principais novidades foi 
+                        <mark>a introdução de tags semânticas</mark>
+                        , que revolucionaram a forma como estruturamos documentos para a web.
+                    </p>
+    
+                    <div class="divider">
+                         <p>
+                            Para contextos científicos ou matemáticos, usamos <code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>. Por exemplo, a fórmula da água é H<sub>2</sub>O e 2<sup>10</sup> é 1024.
+                        </p>
+                    </div>
+    
+                    <div class="divider">
+                        <p>
+                            Para conteúdo técnico, temos um trio poderoso. Para salvar um arquivo, digite <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+                            O comando a seguir, <code>git commit</code>, é essencial.
+                        </p>
+                        <p>Para blocos de código maiores, combinamos <code>&lt;pre&gt;</code> com <code>&lt;code&gt;</code>:</p>
+                        <pre><code class="language-js">function helloWorld() {
+  console.log("Olá, mundo!");
+}</code></pre>
+                    </div>
+    
+                    <div class="divider divider-list">
+                        <p><code>&lt;dfn&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;time&gt;</code>, <code>&lt;mark&gt;</code>: Dão significado contextual a palavras e frases.</p>
+                        <p><code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>: Para fórmulas, notas de rodapé e expressões matemáticas.</p>
+                        <p><code>&lt;kbd&gt;</code>: Estiliza o texto para parecer uma tecla, indicando uma ação do usuário.</p>
+                        <p><code>&lt;code&gt;</code>: Para nomes de funções ou pequenos comandos.</p>
+                        <p><code>&lt;pre&gt;</code>: Essencial para exibir blocos de código sem que o navegador colapse os espaços.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
     </main>
+
+    <footer>
+        <p>
+            Página construída como um projeto de estudo sobre HTML5 Semântico.
+        </p>
+        <p>
+            &copy; 2025. Todos os direitos reservados.
+        </p>
+    </footer>
 </body>
+
 </html>
